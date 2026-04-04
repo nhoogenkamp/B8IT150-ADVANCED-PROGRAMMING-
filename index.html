@@ -1,6 +1,8 @@
 <html>
     <head>
         <script>
+            //https://paul-laird.github.io/b9is123_2425_tmd3/
+            
             function sumMultiples(n, a, b) {
                 let result = 0;
 
@@ -30,7 +32,7 @@
             let results = f4(3,5,arr);
 
             alert(results);
-            
+
             function f5(a, l) {
                 let sum = 0;
 
@@ -49,7 +51,27 @@
             let results2 = f5(factors,numbers);
 
             alert(results2);
-                        
+
+            function f6(a, l) {
+                let sum = 0;
+
+                for (let i = 0; i < l.length; i++) {
+                    for (let j = 0; j < a.length; j++) {
+                        if (l[i] % a[j] === 0) {
+                            sum += l[i];
+                            break;
+                        }
+                    }
+                }
+
+                return sum;
+            }
+            let factors2 = [3,5,7];
+            let numbers2 = [1,3,5,7,9,10,14];
+
+            let results3 = f6(factors2, numbers2);
+
+            alert(results3);                        
         </script>
     </head>
 </html>
