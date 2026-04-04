@@ -1,7 +1,18 @@
 <html>
     <head>
         <script>
-            alert('Hello World');
+            function sumMultiples(n, a, b) {
+                let result = 0;
+
+                for (let i = 1; i < n; i++) {
+                    if (i % a === 0 || i % b === 0) {
+                        result += i;
+                    }
+                }
+                return result;
+            }
+            let result =sumMultiples(10, 3, 5)
+            alert(result);
         </script>
     </head>
 </html>
