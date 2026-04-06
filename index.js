@@ -78,3 +78,30 @@ let f5handler = () => {
 
     alert(result);
 }
+
+function f6(a, l) {
+    let sum = 0;
+
+    for (let i = 0; i < l.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (l[i] % a[j] === 0) {
+                sum += l[i];
+                break;
+            }
+        }
+    }
+
+    return sum;
+}
+
+let f6handler = () => {
+    let a = document.getElementById("a6").value;
+    let l = document.getElementById("l6").value;
+
+    let factors = a.split(",").map(Number);
+    let numbers = l.split(",").map(Number);
+
+    let result = f6(factors, numbers);
+
+    alert(result);
+}
