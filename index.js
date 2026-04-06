@@ -39,11 +39,9 @@ alert(results);
 let f4handler = () => {
     let a = parseInt(document.getElementById("a4").value);
     let b = parseInt(document.getElementById("b4").value);
-
     let l = document.getElementById("l4").value;
 
-    // convert input text into array
-    let arr = l.split(" ");
+    let arr = l.split(",").map(x => parseInt(x));
 
     let result = f4(a, b, arr);
 
