@@ -37,10 +37,10 @@ let results = f4(3, 5, arr);
 alert(results);
 
 let f4handler = () => {
-    let a = parseInt(document.getElementById("a").value);
-    let b = parseInt(document.getElementById("b").value);
+    let a = parseInt(document.getElementById("a4").value);
+    let b = parseInt(document.getElementById("b4").value);
 
-    let l = document.getElementById("l").value;
+    let l = document.getElementById("l4").value;
 
     // convert input text into array
     let arr = l.split(" ");
