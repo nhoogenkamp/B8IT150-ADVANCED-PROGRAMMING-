@@ -47,3 +47,34 @@ let f4handler = () => {
 
     alert(result);
 }
+
+function f5(a, l) {
+    let sum = 0;
+
+    for (let i = 0; i < l.length; i++) {
+        if (l[i] % a[0] === 0 || l[i] % a[1] === 0) {
+            sum += l[i];
+        }
+    }
+
+    return sum;
+}
+
+let factors = [3,5];
+let numbers = [1,3,5,7,9,10];
+let results2 = f5(factors,numbers);
+
+alert(results2);
+
+let f5handler = () => {
+
+    let a = document.getElementById("a5").value;
+    let l = document.getElementById("l5").value;
+
+    let factors = a.split(",").map(Number);
+    let numbers = l.split(",").map(Number);
+
+    let result = f5(factors, numbers);
+
+    alert(result);
+}
