@@ -6,6 +6,11 @@
   <script>
     let handler=()=>{
       alert("Hi");
+      rates=fetch("https://open.er-api.com/v6/latest/USD");
+      rates.then(resp => resp.json())
+      .then(data=>data["rates"]["BRL"])
+      .then(rate=>alert("1 USD = "+rate+"BRL"));
+    }
   </script>
 
   
