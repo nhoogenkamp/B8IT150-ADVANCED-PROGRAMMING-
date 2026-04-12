@@ -4,7 +4,8 @@
 <h1>JavaScript Fetch API</h1>
 <h2>The fetch() Method</h2>
 <p id="setup">Loading a joke</p>
-
+<p id="punchline">Loading the answer</p>
+  
 <script>
 getJoke("https://official-joke-api.appspot.com/random_joke");
 
@@ -13,6 +14,7 @@ async function getJoke(url) {
   let data = await response.json();
 
   document.getElementById("setup").innerHTML = data.setup;
+  document.getElementById("punchline").innerHTML = data.punchline;
 }
 </script>
 
