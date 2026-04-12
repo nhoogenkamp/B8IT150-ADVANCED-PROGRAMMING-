@@ -11,7 +11,8 @@ getJoke("https://official-joke-api.appspot.com/random_joke");
 async function getJoke(url) {
   let response = await fetch(url);
   let data = await response.json();
-  document.getElementById("demo").innerHTML = myText;
+
+  document.getElementById("setup").innerHTML = data.setup;
 }
 </script>
 
